@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"fly\startup_stm32f103xb.o"
+"fly\main.o"
+"fly\gpio.o"
+"fly\usart.o"
+"fly\stm32f1xx_it.o"
+"fly\stm32f1xx_hal_msp.o"
+"fly\data.o"
+"fly\stm32f1xx_hal_gpio_ex.o"
+"fly\stm32f1xx_hal_uart.o"
+"fly\stm32f1xx_hal.o"
+"fly\stm32f1xx_hal_rcc.o"
+"fly\stm32f1xx_hal_rcc_ex.o"
+"fly\stm32f1xx_hal_gpio.o"
+"fly\stm32f1xx_hal_dma.o"
+"fly\stm32f1xx_hal_cortex.o"
+"fly\stm32f1xx_hal_pwr.o"
+"fly\stm32f1xx_hal_flash.o"
+"fly\stm32f1xx_hal_flash_ex.o"
+"fly\stm32f1xx_hal_exti.o"
+"fly\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "fly\fly.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "fly.map" -o fly\fly.axf
